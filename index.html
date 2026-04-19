@@ -431,6 +431,41 @@
                що забезпечують контроль, точність і стабільний результат у полі.
             </p>
 
+            <section class="projectFilters" aria-label="Пошук та фільтрація рішень">
+               <div class="projectFilters__search">
+                  <label class="projectFilters__label" for="project-search">Пошук рішень</label>
+                  <input id="project-search" class="projectFilters__search-input" type="search"
+                     placeholder="Введіть назву або опис..." autocomplete="off" />
+               </div>
+
+               <fieldset class="projectFilters__tech" aria-label="Фільтр за технологіями">
+                  <legend class="projectFilters__label">Технології</legend>
+                  <label class="projectFilters__checkbox">
+                     <input type="checkbox" name="tech-filter" value="сівалки" />
+                     <span>Сівалки</span>
+                  </label>
+                  <label class="projectFilters__checkbox">
+                     <input type="checkbox" name="tech-filter" value="добрива" />
+                     <span>Добрива</span>
+                  </label>
+                  <label class="projectFilters__checkbox">
+                     <input type="checkbox" name="tech-filter" value="контроль висіву" />
+                     <span>Контроль висіву</span>
+                  </label>
+                  <label class="projectFilters__checkbox">
+                     <input type="checkbox" name="tech-filter" value="автоматизація" />
+                     <span>Автоматизація</span>
+                  </label>
+               </fieldset>
+
+               <div class="projectFilters__actions">
+                  <p class="projectFilters__count" aria-live="polite">
+                     Знайдено рішень: <strong id="project-results-count">0</strong>
+                  </p>
+                  <button type="button" class="projectFilters__clear">Очистити фільтри</button>
+               </div>
+            </section>
+
             <ul class="ourCollection__menu">
 
                <li class="ourCollection__menu-links" data-aos="fade-up" data-aos-delay="150">
@@ -441,7 +476,8 @@
                   <a href="#" class="ourCollection__menu-link">// Автоматизація</a>
                </li>
 
-               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="300">
+               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="300"
+                  data-technologies="сівалки,добрива,контроль висіву">
                   <iframe class="ourCollection__menu-img" width="100%"
                      src="https://www.youtube.com/embed/FUWAkYYd1YQ?si=0Clefnu3SY-ThliT" title="YouTube video player"
                      frameborder="0"
@@ -455,7 +491,8 @@
                   <a class="ourCollection__menu-button" href="#">Детальніше</a>
                </li>
 
-               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="200">
+               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="200"
+                  data-technologies="добрива,автоматизація">
                   <iframe class="ourCollection__menu-img" width="100%"
                      src="https://www.youtube.com/embed/fWj5vYf1ur8?si=CA1JtceF8BE5OWcS" title="YouTube video player"
                      frameborder="0"
@@ -470,7 +507,8 @@
                   <a class="ourCollection__menu-button" href="#">Детальніше</a>
                </li>
 
-               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="400">
+               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="400"
+                  data-technologies="сівалки,контроль висіву,автоматизація">
                   <iframe class="ourCollection__menu-img" width="100%"
                      src="https://www.youtube.com/embed/YuZyab_96nk?si=m38qFtpnZRpGuE30" title="YouTube video player"
                      frameborder="0"
@@ -485,7 +523,8 @@
                   <a class="ourCollection__menu-button" href="#">Детальніше</a>
                </li>
 
-               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="500">
+               <li class="ourCollection__menu-list" data-aos="fade-up" data-aos-delay="500"
+                  data-technologies="сівалки,контроль висіву">
                   <iframe class="ourCollection__menu-img" width="100%"
                      src="https://www.youtube.com/embed/WgKaxRZfhvM?si=ti7Yp1cmAn2rHG88" title="YouTube video player"
                      frameborder="0"
@@ -501,6 +540,9 @@
                </li>
 
             </ul>
+            <p class="projectFilters__empty" hidden aria-live="polite">
+               Нічого не знайдено. Спробуйте змінити пошук або очистити фільтри.
+            </p>
          </article>
       </section>
 
@@ -765,6 +807,7 @@
    <script src="./js/slider.js"></script>
    <script src="./js/arrowFly.js"></script>
    <script src="./js/counter.js"></script>
+   <script src="./js/project_filters.js"></script>
 </body>
 
 </html>
