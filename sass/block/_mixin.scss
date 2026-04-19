@@ -1,0 +1,19 @@
+@mixin flex($jc, $ai) {
+   display: flex;
+   justify-content: $jc;
+   align-items: $ai;
+}
+
+@mixin f-family($ff, $fz, $fw, $lh, $ls) {
+   font-family: $ff, serif;
+   font-size: $fz;
+   font-weight: $fw;
+   line-height: $lh;
+   letter-spacing: $ls;
+}
+
+@mixin content($mw) {
+   max-width: $mw;
+   height: 100%;
+   margin: 0 auto;
+}

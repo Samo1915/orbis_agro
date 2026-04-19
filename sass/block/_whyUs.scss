@@ -1,0 +1,228 @@
+.whyUs {
+   padding: 160px 0;
+
+   &__content {
+      @include content(1440px);
+      // @include content;
+   }
+
+   &__top {
+      @include flex(space-between, center);
+
+      &-title {
+         @include f-family(Epilogue, 50px, 400, 58px, -1.5px);
+         max-width: 700px;
+      }
+
+      &-text {
+         @include f-family(Jost, 24px, 400, 32px, -0.48px);
+         color: #929191;
+         max-width: 437px;
+      }
+   }
+
+   &__bottom {
+      padding-top: 100px;
+      @include flex(center, center);
+      flex-wrap: wrap;
+      gap: 24px;
+
+      &-block {
+         @include flex(start, start);
+         flex-direction: column;
+         min-height: 350px;
+         max-width: 437px;
+         padding: 30px;
+         cursor: pointer;
+         box-shadow: 5px 5px 8px #9e9c9c;
+         
+         img {
+            padding: 20px;
+            border-radius: 50px;
+            margin-bottom: auto;
+         }
+
+         &-title {
+            @include f-family(Epilogue, 36px, 400, 44px, -1.08px);
+         }
+
+         &-text {
+            @include f-family(Jost, 16px, 400, 24px, -0.32px);
+            margin-top: 16px;
+         }
+      }
+
+      .block_green {
+         background: #1b5d37;
+         color: #fff;
+
+         img {
+            border: 1px solid #fff;
+         }
+      }
+
+      .block_white {
+         background: #eeeeee;
+
+         img {
+            border: 1px solid #1b5d37;
+         }
+
+         .whyUs__bottom-block-title {
+            color: #000;
+         }
+
+         .whyUs__bottom-block-text {
+            color: #8f8f8f;
+         }
+      }
+   }
+}
+
+
+@media screen and (max-width: 1470px) {
+   .whyUs {
+      padding: 100px 0;
+   
+      &__content {
+         @include content(1200px);
+      }
+   
+      &__top {
+   
+         &-title {
+            @include f-family(Epilogue, 45px, 400, 50px, -1.5px);
+            max-width: 535px;
+         }
+   
+         &-text {
+            @include f-family(Jost, 20px, 400, 30px, -0.48px);
+            max-width: 422px;
+         }
+      }
+   
+      &__bottom {
+         padding-top: 80px;
+   
+         &-block {
+            max-width: 420px;
+            padding: 25px;
+
+   
+            &-title {
+               @include f-family(Epilogue, 30px, 400, 40px, -1.08px);
+               margin-top: 125px;
+               max-width: 222px;
+            }
+   
+            &-text {
+               @include f-family(Jost, 14px, 400, 22px, -0.32px);
+               margin-top: 16px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   .whyUs {
+      padding: 0 0 50px 0;
+   
+      &__content {
+         @include content(900px);
+      }
+   
+      &__top {
+         flex-direction: column;
+         text-align: center;
+   
+         &-title {
+            @include f-family(Epilogue, 40px, 400, 50px, -1.5px);
+            max-width: 535px;
+            margin-bottom: 20px;
+         }
+   
+         &-text {
+            @include f-family(Jost, 16px, 400, 25px, -0.48px);
+            max-width: 422px;
+         }
+      }
+   
+      &__bottom {
+         padding-top: 0;
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .whyUs {
+   
+      &__content {
+         @include content(600px);
+      }
+   
+      &__top {
+   
+         &-title {
+            @include f-family(Epilogue, 30px, 400, 40px, -1.5px);
+            max-width: 344px;
+            margin-bottom: 20px;
+         }
+   
+         &-text {
+            @include f-family(Jost, 14px, 400, 18px, -0.48px);
+            max-width: 327px;
+         }
+      }
+   
+      &__bottom {
+         padding-top: 50px;
+
+         &-block {
+            max-width: 285px;
+            padding: 15px;
+min-height: 200px;
+            img {
+               padding: 8px;
+            }
+   
+            &-title {
+               @include f-family(Epilogue, 18px, 400, 30px, -1.08px);
+               margin-top: 70px;
+               max-width: 130px;
+            }
+   
+            &-text {
+               @include f-family(Jost, 14px, 400, 18px, -0.32px);
+               margin-top: 10px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 630px) {
+   .whyUs {
+   
+      &__content {
+         @include content(360px);
+      }
+   
+      &__top {
+   
+         &-title {
+            @include f-family(Epilogue, 24px, 400, 30px, -1.5px);
+            max-width: 327px;
+         }
+   
+         &-text {
+            @include f-family(Jost, 14px, 400, 15px, -0.48px);
+            max-width: 257px;
+         }
+      }
+   
+      &__bottom {
+         padding-top: 30px;
+      }
+   }
+}

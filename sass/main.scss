@@ -1,0 +1,155 @@
+@import "./block/reset";
+@import "./block/mixin";
+@import "./block/header";
+@import "./block/aboutUs";
+@import "./block/ourServices";
+@import "./block/whyUs";
+@import "./block/ourCollection";
+@import "./block/testimonials";
+@import "./block/callToAction";
+@import "./block/footer";
+@import "./block/responsive";
+
+body.lock {
+   overflow: hidden;
+   touch-action: none;
+   
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+   html {
+      scroll-behavior: smooth;
+   }
+}
+
+
+@keyframes rotateArrow {
+   0% {
+      transform:  rotate(0deg);
+   }
+   100% {
+      transform: rotate(-135deg);
+   }
+}
+
+@keyframes arrowBack {
+   0% {
+      transform: rotate(-180deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+.mainBtn {
+   border-radius: 50px;
+   gap: 50px;
+
+   a {
+      @include f-family(Jost, 16px, 400, 24px, -0.32px);
+      @include flex(space-between, center);
+      border-radius: 50px;
+      padding: 10px 10px 10px 30px;
+      border: 3px solid #1b5d37;
+      background: #1b5d37;
+      gap: 50px;
+      width: fit-content;
+      color: #fff;
+      transition: 0.4s;
+
+      svg {
+         background: #fff;
+         border-radius: 50px;
+         transition: 0.4s;
+         transform: translate(0,0) scale(1);
+         width: 35px;
+         height: 35px;
+
+         path {
+            transition: 0.4s;
+         }
+      }
+
+      svg.fly {
+         animation: rotateArrow 0.5s ease forwards;
+      }
+      
+      svg.back {
+         animation: arrowBack 0.5s ease forwards;
+      }
+
+      &:hover {
+         background: #fff;
+         color: #1b5d37;
+
+         svg {
+            background: #1b5d37;
+
+            path {
+               stroke: #fff;
+            }
+         }
+      }
+   }
+}
+
+.whiteBtn {
+   border-radius: 50px;
+   gap: 50px;
+
+   a {
+      @include flex(space-between, center);
+      border-radius: 50px;
+      padding: 15px 20px;
+      border: 3px solid #fff;
+      background: #fff;
+      color: #000;
+      gap: 50px;
+      transition: 0.4s;
+
+      &:hover {
+         border: 3px solid #1b5d37;
+         // background: #fff;
+         color: #1b5d37;
+      }
+   }
+}
+
+
+@media screen and (max-width: 1220px) {
+   .mainBtn {
+      gap: 20px;
+   
+      a {
+         @include f-family(Jost, 14px, 400, 24px, -0.32px);
+         padding: 5px 5px 5px 20px;
+         gap: 20px;
+         
+         svg {
+            width: 25px;
+            height: 25px;
+         }
+      }
+   }
+
+   .whiteBtn {
+      gap: 20px;
+   
+      a {
+         @include f-family(Jost, 14px, 400, 24px, -0.32px);
+         padding: 5px 20px;
+         border: 1px solid #fff;
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .mainBtn {
+      a {
+         svg {
+               transform: none;
+         }
+      }
+   }
+}

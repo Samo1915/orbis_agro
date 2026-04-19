@@ -1,0 +1,180 @@
+.ourServices {
+
+   &__content {
+      @include content(1440px);
+
+      &-title {
+         @include f-family(Epilogue, 50px, 400, 58px, -1.5px);
+         max-width: 733px;
+         margin-bottom: 24px;
+      }
+
+      &-text {
+         @include f-family(Jost, 24px, 400, 32px, -0.48px);
+         max-width: 659px;
+         color: #929191;
+      }
+   }
+
+   &__services {
+      &-block {
+         @include flex(space-between, center);
+         padding: 50px 0;
+         border-bottom: 1px solid #929191;
+         gap: 40px;
+      }
+
+      &-info {
+         flex: 1;
+         width: 100%;
+      }
+
+      &-image {
+         background: rgba(0, 0, 0, 0.2);
+         width: 100%;
+         height: 264px;
+         flex: 1;
+      }
+   }
+
+   &__info-upperText {
+      @include f-family(Jost, 16px, 400, 24px, -0.32px);
+      padding-left: 16px;
+      border-left: 3px solid #1b5d37;
+      margin-bottom: 24px;
+   }
+
+   &__info-title {
+      @include f-family(Epilogue, 40px, 400, 48px, -1.2px);
+      margin-bottom: 18px;
+   }
+
+   &__info-text {
+      @include f-family(Jost, 18px, 400, 26px, -0.36px);
+      color: #929191;
+      margin-bottom: 40px;
+   }
+}
+
+@media screen and (max-width: 1470px) {
+   .ourServices {
+      padding: 100px 0 120px;
+
+      &__content {
+         @include content(1200px);
+
+         &-title {
+            @include f-family(Epilogue, 45px, 400, 50px, -1.5px);
+            max-width: 660px;
+            margin-bottom: 20px;
+         }
+
+         &-text {
+            @include f-family(Jost, 20px, 400, 30px, -0.48px);
+            max-width: 545px;
+         }
+      }
+
+      &__services {
+         &-block {
+            padding: 50px 0;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   .ourServices {
+      padding: 50px 0 60px;
+
+      &__content {
+         @include content(900px);
+
+         &-title {
+            @include f-family(Epilogue, 40px, 400, 50px, -1.5px);
+            max-width: 578px;
+            margin-bottom: 10px;
+         }
+
+         &-text {
+            @include f-family(Jost, 16px, 400, 25px, -0.48px);
+            max-width: 437px;
+         }
+      }
+
+      &__services {
+         &-block {
+            padding: 30px 0;
+         }
+      }
+
+      &__info-upperText {
+         @include f-family(Jost, 14px, 400, 20px, -0.32px);
+         padding-left: 16px;
+         margin-bottom: 15px;
+      }
+
+      &__info-title {
+         @include f-family(Epilogue, 30px, 400, 40px, -1.2px);
+         margin-bottom: 13px;
+      }
+
+      &__info-text {
+         @include f-family(Jost, 14px, 400, 26px, -0.36px);
+         max-width: 410px;
+         margin-bottom: 20px;
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .ourServices {
+      &__content {
+         @include content(600px);
+
+         &-title {
+            @include f-family(Epilogue, 30px, 400, 40px, -1.5px);
+            max-width: 420px;
+         }
+
+         &-text {
+            @include f-family(Jost, 14px, 400, 18px, -0.48px);
+            max-width: 314px;
+         }
+      }
+
+      &__services {
+         
+         &-block {
+            flex-direction: column-reverse;
+            gap: 30px;
+         }
+
+         &-image {
+            flex: none;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 630px) {
+   .ourServices {
+      &__content {
+         @include content(360px);
+
+         &-title {
+            @include f-family(Epilogue, 24px, 400, 30px, -1.5px);
+            max-width: 327px;
+         }
+
+         &-text {
+            @include f-family(Jost, 14px, 400, 15px, -0.48px);
+            max-width: 257px;
+         }
+      }
+
+      &__info-title {
+         @include f-family(Epilogue, 27px, 400, 40px, -1.2px);
+      }
+   }
+}

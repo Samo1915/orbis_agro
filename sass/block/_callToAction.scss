@@ -1,0 +1,140 @@
+.callToAction {
+   background: rgba(0, 0, 0, 0.5);
+   text-align: center;
+   padding: 100px 0;
+   color: #fff;
+
+   &__content {
+      @include content(1440px);
+      @include flex(center, center);
+      flex-direction: column;
+   }
+
+   &__title {
+      @include f-family(Epilogue, 93.61px, 400, 101.93px, -2.808px);
+      max-width: 942px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      @include f-family(Jost, 16px, 400, 24px, -0.32px);
+      width: 532px;
+      margin-bottom: 60px;
+   }
+
+   &__input {
+      @include f-family(Jost, 16px, 400, 24px, -0.32px);
+      @include flex(center, center);
+      padding: 16px 20px;
+      border-radius: 50px;
+      background: #fff;
+      gap: 20px;
+
+      input {
+         width: 210px;
+      }
+   }
+}
+
+@media screen and (max-width: 1470px) {
+   .callToAction {
+      padding: 50px 0;
+      color: #fff;
+   
+      &__content {
+         @include content(1200px);
+         @include flex(center, center);
+         flex-direction: column;
+      }
+   
+      &__title {
+         @include f-family(Epilogue, 80px, 400, 90px, -2.808px);
+         max-width: 650px;
+      }
+   
+      &__text {
+         @include f-family(Jost, 14px, 400, 20px, -0.32px);
+         max-width: 460px;
+         margin-bottom: 0;
+      }
+   
+      &__input {
+         padding: 12px 26px;
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   .callToAction {
+   
+      &__title {
+         @include f-family(Epilogue, 50px, 400, 55px, -2.808px);
+         max-width: 410px;
+         margin-bottom: 0;
+      }
+   
+      &__text {
+         @include f-family(Jost, 14px, 400, 16px, -0.32px);
+         max-width: 388px;
+         margin-bottom: 0;
+      }
+   
+      &__input {
+         padding: 12px 26px;
+
+         input {
+            font-size: 14px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .callToAction {
+   
+      &__title {
+         @include f-family(Epilogue, 30px, 400, 40px, -1.5px);
+         max-width: 235px;
+      }
+   
+      &__text {
+         @include f-family(Jost, 14px, 400, 16px, -0.32px);
+         max-width: 318px;
+      }
+   
+      &__input {
+         padding: 5px 10px;
+         gap: 0;
+
+         input {
+            width: 110px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 630px) {
+   .callToAction {
+   
+      &__title {
+         @include f-family(Epilogue, 24px, 400, 30px, -1.5px);
+         max-width: 235px;
+      }
+   
+      &__text {
+         @include f-family(Jost, 14px, 400, 14px, -0.32px);
+         max-width: 256px;
+      }
+
+      &__input {
+         @include flex(center, center);
+         flex-direction: column;
+         gap: 15px;
+         padding: 15px;
+         border-radius: 10px;
+         input {
+            width: 100%;
+         }
+      }
+   }
+}

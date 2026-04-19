@@ -1,0 +1,384 @@
+.footer {
+   background: #000;
+   padding: 60px 0;
+
+   &__content {
+      @include content(1440px);
+   }
+
+   &__top {
+      @include flex(space-between, center);
+      padding-bottom: 50px;
+      border-bottom: 1px solid #6b6b6b;
+
+      &-title {
+         @include f-family(Freeman, 40px, 400, 48px, -0.8px);
+         color: #fff;
+         margin-bottom: 86px;
+         flex: 1;
+
+         img {
+            width: 80%;
+         }
+      }
+
+      &-leftMenu {
+         @include flex(start, center);
+         gap: 11px;
+         flex: 1;
+         width: 100%;
+      }
+
+      &-leftList {
+         position: relative;
+         padding: 25px;
+         border-radius: 50px;
+         border: 1px solid #fff;
+         transition: all 0.6s;
+
+         &:hover {
+            background: #fff;
+         }
+         &:hover svg path {
+            fill: #000;
+         }
+
+         svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: inherit;
+
+            path {
+               transition: all 0.6s;
+            }
+         }
+      }
+
+      &-rigth {
+         @include flex(center, center);
+         gap: 60px;
+      }
+
+      &-rightMenu {
+         @include flex(start, start);
+         flex-direction: column;
+         gap: 5px;
+      }
+
+      &-rightList {
+         p {
+            margin-bottom: 24px;
+            color: #fff;
+            @include f-family(Jost, 24px, 500, 32px, -0.48px);
+         }
+
+         a {
+            color: #929191;
+            @include f-family(Jost, 16px, 400, 24px, -0.32px);
+            transition: all 0.4s;
+
+            &:hover {
+               color: #fff;
+            }
+         }
+      }
+   }
+
+   &__copyright {
+      @include flex(space-between, center);
+      padding-top: 50px;
+
+      p,
+      a {
+         @include f-family(Jost, 16px, 400, 24px, -0.32px);
+         color: #a5a4a4;
+      }
+
+      &-policy {
+         @include flex(center, center);
+         gap: 24px;
+
+         a {
+            transition: all 0.4s;
+
+            &:hover {
+               color: #fff;
+            }
+         }
+      }
+   }
+
+   &__bottom {
+      margin-top: 30px;
+
+      &-logo {
+         @include f-family(Freeman, 239.846px, 400, 303.805px, -4.797px);
+         @include flex(center, center);
+         color: #fff;
+         gap: 120px;
+
+         img {
+            width: 400px;
+         }
+      }
+   }
+}
+
+
+@media screen and (max-width: 1470px) {
+   .footer {
+      padding: 30px 0;
+   
+      &__content {
+         @include content(1200px);
+      }
+   
+      &__top {
+         @include flex(space-between, center);
+         padding-bottom: 50px;
+         border-bottom: 1px solid #6b6b6b;
+   
+         &-title {
+            @include f-family(Freeman, 36px, 400, 45px, -0.8px);
+            margin-bottom: 72px;
+         }
+   
+         &-leftList {
+            padding: 22px;
+         }
+   
+         &-rigth {
+            @include flex(center, center);
+            gap: 60px;
+         }
+   
+         &-rightMenu {
+            @include flex(start, start);
+            flex-direction: column;
+            gap: 5px;
+         }
+   
+         &-rightList {
+            p {
+               margin-bottom: 15px;
+            }
+         }
+      }
+   
+      &__copyright {
+         padding-top: 35px;
+      }
+   
+      &__bottom {
+   
+         &-logo {
+            @include f-family(Freeman, 200px, 400, 250px, -4.797px);
+            gap: 50px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   .footer {
+      padding: 20px 0;
+   
+      &__content {
+         @include content(900px);
+      }
+   
+      &__top {
+         flex-direction: column;
+         gap: 70px;
+   
+         &-title {
+            @include f-family(Freeman, 36px, 400, 45px, -0.8px);
+            margin-bottom: 0;
+            text-align: center;
+         }
+
+         &-left {
+            @include flex(center, center);
+            gap: 50px;
+         }
+
+         &-leftMenu {
+            @include flex(center, center);
+         }
+   
+         &-leftList {
+            padding: 22px;
+         }
+   
+         &-rigth {
+            flex-wrap: wrap;
+            gap: 50px;
+         }
+   
+         &-rightMenu {
+            @include flex(start, start);
+            flex-direction: column;
+            gap: 5px;
+         }
+   
+         &-rightList {
+            p {
+               margin-bottom: 15px;
+            }
+         }
+      }
+   
+      &__copyright {
+         padding-top: 35px;
+      }
+   
+      &__bottom {
+   
+         &-logo {
+            @include f-family(Freeman, 160px, 400, 212px, -4.797px);
+            gap: 50px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .footer {   
+      &__content {
+         @include content(600px);
+      }
+   
+      &__top {
+         flex-direction: column;
+         gap: 70px;
+   
+         &-title {
+            @include f-family(Freeman, 36px, 400, 45px, -0.8px);
+            margin-bottom: 0;
+
+            img {
+               width: 50%;
+            }
+         }
+
+         &-left {
+            @include flex(center, center);
+            gap: 50px;
+         }
+   
+         &-leftList {
+            padding: 22px;
+         }
+   
+         &-rigth {
+            flex-wrap: wrap;
+            gap: 50px;
+         }
+   
+         &-rightMenu {
+            @include flex(start, start);
+            flex-direction: column;
+            gap: 5px;
+         }
+   
+         &-rightList {
+            p {
+               margin-bottom: 15px;
+            }
+         }
+      }
+   
+      &__copyright {
+         padding-top: 20px;
+
+         p,
+         a {
+            @include f-family(Jost, 14px, 400, 20px, -0.32px);
+         }
+      }
+   
+      &__bottom {
+   
+         &-logo {
+            @include f-family(Freeman, 110px, 400, 130px, -4.797px);
+            gap: 50px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 630px) {
+   .footer {   
+      &__content {
+         @include content(360px);
+      }
+   
+      &__top {
+         flex-direction: column;
+         gap: 40px;
+   
+         &-title {
+            @include f-family(Freeman, 36px, 400, 45px, -0.8px);
+            margin-bottom: 0;
+         }
+          &-title img{
+            width: 50%;
+          }
+
+         &-left {
+            @include flex(center, center);
+            flex-direction: column;
+            gap: 0;
+         }
+   
+         &-leftList {
+            padding: 17px;
+
+            svg {
+               width: 20px;
+               height: inherit;
+            }
+         }
+   
+         &-rigth {
+            flex-wrap: wrap;
+            gap: 50px;
+         }
+   
+         &-rightMenu {
+            @include flex(start, start);
+            flex-direction: column;
+            gap: 5px;
+         }
+   
+         &-rightList {
+            p {
+               margin-bottom: 15px;
+            }
+         }
+      }
+   
+      &__copyright {
+         padding-top: 20px;
+
+         p,
+         a {
+            @include f-family(Jost, 14px, 400, 20px, -0.32px);
+         }
+      }
+   
+      &__bottom {
+   
+         &-logo {
+            @include f-family(Freeman, 60px, 400, 70px, -1px);
+            
+            img {
+               display: none;
+            }
+         }
+      }
+   }
+}

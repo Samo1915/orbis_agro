@@ -1,0 +1,249 @@
+.aboutUs {
+   &__content {
+      padding: 160px 0;
+      @include content(1440px);
+   }
+
+   &__top-block {
+      @include flex(space-between, start);
+   }
+
+   &__title {
+      @include f-family(Epilogue, 50px, 400, 58px, -1.5px);
+      max-width: 608px;
+   }
+
+   &__text {
+      max-width: 544px;
+
+      &-first {
+         @include f-family(Jost, 24px, 400, 32px, -0.48px);
+         margin-bottom: 24px;
+      }
+
+      &-second {
+         color: #929191;
+         @include f-family(Jost, 24px, 400, 32px, -0.48px);
+         margin-bottom: 40px;
+      }
+
+      &-button {
+         height: 100%;
+      }
+   }
+
+   &__bottom-block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 100px;
+
+      .box {
+         max-width: 320px;
+
+         &__count {
+            @include f-family(Epilogue, 70px, 400, 78px, -2.1px);
+            margin-bottom: 10px;
+         }
+
+         &__title {
+            @include f-family(Jost, 24px, 400, 32px, -0.48px);
+            margin-bottom: 24px;
+         }
+
+         &__text {
+            @include f-family(Jost, 16px, 400, 24px, -0.32px);
+            color: #9f9f9f;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1470px) {
+   .aboutUs {
+      &__content {
+         padding: 100px 0;
+         @include content(1200px);
+      }
+
+      &__title {
+         @include f-family(Epilogue, 45px, 400, 50px, -1.5px);
+      }
+
+      &__text {
+         max-width: 544px;
+
+         &-first {
+            @include f-family(Jost, 20px, 400, 30px, -0.48px);
+            margin-bottom: 20px;
+         }
+
+         &-second {
+            @include f-family(Jost, 20px, 400, 30px, -0.48px);
+            max-width: 450px;
+            margin-bottom: 35px;
+         }
+
+         &-button {
+            height: 100%;
+         }
+      }
+
+      &__bottom-block {
+         margin-top: 80px;
+
+         .box {
+
+            &__count {
+               @include f-family(Epilogue, 65px, 400, 70px, -2.1px);
+               margin-bottom: 10px;
+            }
+
+            &__title {
+               @include f-family(Jost, 22px, 400, 30px, -0.48px);
+               margin-bottom: 24px;
+            }
+
+            &__text {
+               @include f-family(Jost, 14px, 400, 24px, -0.32px);
+               max-width: 254px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   .aboutUs {
+      &__content {
+         padding: 50px 0;
+         @include content(900px);
+      }
+
+      &__top-block {
+         flex-direction: column;
+      }
+
+      &__title {
+         @include f-family(Epilogue, 40px, 400, 50px, -1.5px);
+         max-width: 470px;
+         margin-bottom: 25px;
+      }
+
+      &__text {
+         max-width: 544px;
+
+         &-first {
+            @include f-family(Jost, 16px, 400, 25px, -0.48px);
+            max-width: 450px;
+            margin-bottom: 20px;
+         }
+
+         &-second {
+            @include f-family(Jost, 16px, 400, 25px, -0.48px);
+            max-width: 350px;
+            margin-bottom: 25px;
+         }
+      }
+
+      &__bottom-block {
+         margin-top: 60px;
+
+         .box {
+            &__count {
+               @include f-family(Epilogue, 45px, 400, 40px, -2.1px);
+               margin-bottom: 10px;
+            }
+
+            &__title {
+               @include f-family(Jost, 18px, 400, 30px, -0.48px);
+               margin-bottom: 10px;
+            }
+
+            &__text {
+               @include f-family(Jost, 14px, 400, 20px, -0.32px);
+               max-width: 215px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .aboutUs {
+      &__content {
+         padding: 50px 0;
+         @include content(600px);
+      }
+
+      &__title {
+         @include f-family(Epilogue, 30px, 400, 40px, -1.5px);
+         max-width: 345px;
+         margin-bottom: 10px;
+      }
+
+      &__text {
+         max-width: 310px;
+
+         &-first {
+            @include f-family(Jost, 14px, 400, 18px, -0.48px);
+            max-width: 310px;
+            margin-bottom: 10px;
+         }
+
+         &-second {
+            @include f-family(Jost, 14px, 400, 18px, -0.48px);
+            max-width: 255px;
+            margin-bottom: 15px;
+         }
+      }
+
+      &__bottom-block {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, auto);
+         gap: 40px;
+
+         .box {
+
+            &__count {
+               @include f-family(Epilogue, 40px, 400, 40px, -2.1px);
+            }
+
+            &__title {
+               @include f-family(Jost, 18px, 400, 30px, -0.48px);
+               margin-top: 6px;
+            }
+
+            &__text {
+               @include f-family(Jost, 14px, 400, 20px, -0.32px);
+               max-width: 215px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 630px) {
+   .aboutUs {
+      &__content {
+         @include content(360px);
+      }
+
+      &__title {
+         @include f-family(Epilogue, 24px, 400, 30px, -1.5px);
+      }
+
+      &__text {
+         max-width: 310px;
+
+         &-first {
+            @include f-family(Jost, 14px, 400, 15px, -0.48px);
+            margin-bottom: 10px;
+         }
+
+         &-second {
+            @include f-family(Jost, 14px, 400, 15px, -0.48px);
+            margin-bottom: 15px;
+         }
+      }
+   }
+}
